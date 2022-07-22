@@ -3,3 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 40%;
+  margin: auto;
+  background-color: white;
+}
+
+.App {
+  background-color: grey;
+  height: 100vh;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: nowrap;
+  gap: 50px;
+  overflow-x: auto;
+  margin: auto;
+  overflow-x: auto;
+}

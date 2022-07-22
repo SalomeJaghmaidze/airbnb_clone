@@ -1,14 +1,27 @@
-
-import './App.css';
-import Header from './components/header/Header';
-import Heros from './components/heros/Heros';
-import Card from './components/card/Card';
+import "./App.css";
+import Header from "./components/header/Header";
+import Heros from "./components/heros/Heros";
+import Card from "./components/card/Card";
+import data from '../src/data'
 function App() {
-  return (
+  const cards = data.map((item,index) => {
+    return (
+        <Card key = {index}
+            item = {item}
+        />
+    )
+})        
+  return ( 
     <div className="App">
-     <Header></Header>
-     <Heros></Heros>
-     <Card></Card>
+      <div className="container">
+      <Header></Header>
+      <Heros></Heros>
+      <section className="card-list">
+      {cards}
+      </section>
+      </div>
+      
+      
     </div>
   );
 }
